@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Home Page</title>
+        <link rel="stylesheet"  href="style.css">
+    </head>
+    
+    <style>
+               
+            .header{
+            
+            background-image: linear-gradient(rgba(0,0,0,0.51),rgba(0,0,0,0.51)),url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4aNbZVqEw-j6GXBkg2PIiUpC1d9JINbyiGNN7g-U9YiCYJGosgFVgrJSF&s=10");
+            background-repeat:no-repeat;
+            background-position:center;
+            background-size:cover;
+            background-attachment:fixed;
+            
+            
+            
+            
+            }
+            
+            .header{
+            
+            text-align:center;
+            width:50px
+            height:80px;
+            font-family:monospace;
+            color:#fff;
+            align-items:center;
+            text-shadow:3px 3px 5px #FF6600;
+            border:3px;
+            
+            
+            
+            
+            }
+            
+            #title{
+            
+            font-size:3em;
+            
+            }
+            
+            .hero{
+            
+            width:800px;
+            margin: 0 auto;
+            
+                        
+            }
+                                               
+                      
+            
+            .select{
+            
+            width:50%;
+            padding:20px;
+            margin-buttom:30px;
+            box-sizing:border-box;
+            background:rgba(255,255,255,0.7);
+            border-radius:6px;
+            font-weight:500;
+            display: inline-block;
+            position: relative;
+            outline: none;
+            text-align-last:center;
+            border: 4px solid #E6FB04;
+            font-size:1.5em;
+            
+            }
+            
+            
+            
+            input[type="submit"]{
+            
+            padding: 2em 2.5em;
+            border-radius:6px;
+            background-color:#333;
+            color:#fff;
+            font-family:Lato, sans-serif;
+            border: 4px outset #FD1C03;
+            font-size:1em;
+                        
+            
+            }
+            
+            
+            .prediction{
+            
+            text-align:center;
+            width:50px
+            height:80px;
+            font-family:monospace;
+            color:#fff;
+            align-items:center;
+            text-shadow:3px 3px 5px #FF6600;
+            border:3px;
+            }
+                     
+            
+           
+    </style>         
+    
+    <body class="header">
+    
+    
+            <h1 id = "title">MOVIE RECOMMENDATION SYSTEM </h1>
+        <form action="#" method="post">
+            
+            <div class = "hero">          
+                         
+                <select class="select" name="movies">
+                
+                    <option value="*" disabled selected>Select Movie</option>
+                    {% for movie in movies_list %}
+                        <option value={{movie}}>{{movie}}</option>
+                    {% endfor %}
+                    
+                    
+                </select>
+            </div></br>
+            </br>            
+            
+            
+           
+            
+            
+            </br>
+            </br>
+                     
+                <input type="submit" name="button" value="RECOMEND">
+  
+               
+         </form></br>
+         </br>
+                    
+                        
+        </div>
+        
+        <div class = "Prediction">
+    
+           {% for rec in recomended_movies%}
+               
+                <p><h1>{{rec}}</h1></li></br>
+                              
+    {% endfor %}  
+        
+        </div>
+        
+        
+        
+            
+             
+        
+    </body>
+    
+    
+
+</html>
